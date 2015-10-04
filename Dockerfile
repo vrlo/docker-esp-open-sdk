@@ -5,29 +5,32 @@ MAINTAINER vrlo <vrovro@gmail.com>
 # unrar is non-free
 RUN echo "deb http://httpredir.debian.org/debian jessie non-free" > /etc/apt/sources.list.d/non-free.list
 
-RUN apt-get update && apt-get install -y \
-	autoconf \
-	automake \
-	bison \
-	bzip2 \
-	flex \
-	g++ \
-	gawk \
-	gcc \
-	git \
-	gperf \
-	libexpat-dev \
-	libtool \
-	make \
-	ncurses-dev \
-	nano \
-	python \
-	python-serial \
-	sed \
-	texinfo \
-	unrar \
-	unzip \
-	wget
+RUN apt-get update && apt-get install -y --no-install-recommends \
+  autoconf \
+  automake \
+  bison \
+  bzip2 \
+  flex \
+  g++ \
+  gawk \
+  gcc \
+  git \
+  gperf \
+  libexpat-dev \
+  libtool \
+  libtool-bin \
+  make \
+  ncurses-dev \
+  nano \
+  patch \
+  python \
+  python-serial \
+  sed \
+  texinfo \
+  unrar \
+  unzip \
+  wget \
+  && rm -rf /var/lib/apt/lists/*
 
 RUN adduser espbuilder && usermod -a -G dialout espbuilder
 
