@@ -1,9 +1,9 @@
 FROM buildpack-deps:jessie-scm
 
-MAINTAINER hecke <hecke@naberius.de>
+MAINTAINER vrlo <vrovro@gmail.com>
 
 # unrar is non-free
-RUN "echo" "deb http://http.us.debian.org/debian wheezy non-free" >> /etc/apt/sources.list
+RUN echo "deb http://httpredir.debian.org/debian jessie non-free" > /etc/apt/sources.list.d/non-free.list
 
 RUN apt-get update && apt-get install -y \
 	autoconf \
