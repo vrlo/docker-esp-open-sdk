@@ -1,4 +1,4 @@
-FROM debian:7.8
+FROM buildpack-deps:jessie-scm
 
 MAINTAINER hecke <hecke@naberius.de>
 
