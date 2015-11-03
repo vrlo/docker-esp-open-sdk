@@ -27,7 +27,7 @@ RUN git clone --recursive https://github.com/pfalcon/esp-open-sdk.git \
 
 ENV PATH /home/espbuilder/esp-open-sdk/xtensa-lx106-elf/bin:/home/espbuilder/esp-open-sdk/esptool/:$PATH
 ENV XTENSA_TOOLS_ROOT /home/espbuilder/esp-open-sdk/xtensa-lx106-elf/bin
-ENV SDK_BASE /home/espbuilder/esp-open-sdk/esp_iot_sdk_v1.4.0
+ENV SDK_BASE /home/espbuilder/esp-open-sdk/esp
 #ENV FW_TOOL /home/espbuilder/esptool-ck/esptool
 
 CMD ["bash"]
